@@ -8,3 +8,5 @@ Process-2.sh  dada2流程
 metadata.txt  分组信息模板
 
 manifest.txt  测序数据输入路径模板
+
+Train-classifier.sh 训练分类器流程
