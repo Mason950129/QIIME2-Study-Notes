@@ -10,3 +10,5 @@ metadata.txt  分组信息模板
 manifest.txt  测序数据输入路径模板
 
 Train-classifier.sh 训练分类器流程
+
+Clustering.sh  OTU聚类分析流程
