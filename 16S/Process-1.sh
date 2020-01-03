@@ -189,66 +189,66 @@ qiime diversity alpha-group-significance \
   --m-metadata-file metadata.txt \ #分组信息
   --o-visualization output/core-metrics-results/shannon-group-significance.qzv
 
-#导出组间差异结果
+# 导出组间差异结果
 qiime tools extract \
   --input-path output/core-metrics-results/evenness-group-significance.qzv \
   --output-path output/core-metrics-results/evenness-group-significance/
-#导出组间差异结果  
+# 导出组间差异结果  
 qiime tools extract \
   --input-path output/core-metrics-results/faith-pd-group-significance.qzv \
   --output-path output/core-metrics-results/faith-pd-group-significance/  
-#导出组间差异结果   
+# 导出组间差异结果   
 qiime tools extract \
   --input-path output/core-metrics-results/observed_otus-group-significance.qzv \
   --output-path output/core-metrics-results/observed_otus-group-significance/  
-#导出组间差异结果  
+# 导出组间差异结果  
 qiime tools extract \
   --input-path output/core-metrics-results/shannon-group-significance.qzv \
   --output-path output/core-metrics-results/shannon-group-significance/
 
-#导出bray_curtis矩阵
+# 导出bray_curtis矩阵
 qiime tools export \
   --input-path output/core-metrics-results/bray_curtis_distance_matrix.qza \
   --output-path output/core-metrics-results/bray_curtis_distance_matrix
-#导出jaccard_distance矩阵  
+# 导出jaccard_distance矩阵  
 qiime tools export \
   --input-path output/core-metrics-results/jaccard_distance_matrix.qza \
   --output-path output/core-metrics-results/jaccard_distance_matrix
-#导出unweighted_unifrac矩阵   
+# 导出unweighted_unifrac矩阵   
 qiime tools export \
   --input-path output/core-metrics-results/unweighted_unifrac_distance_matrix.qza \
   --output-path output/core-metrics-results/unweighted_unifrac_distance_matrix
-#导出weighted_unifrac矩阵     
+# 导出weighted_unifrac矩阵     
 qiime tools export \
   --input-path output/core-metrics-results/weighted_unifrac_distance_matrix.qza \
   --output-path output/core-metrics-results/weighted_unifrac_distance_matrix
-#导出rarefied表格
+# 导出rarefied表格
 qiime tools export \
   --input-path output/core-metrics-results/rarefied_table.qza \
   --output-path output/core-metrics-results/rarefied_table
 
-#导出shannon_vector表格  
+# 导出shannon_vector表格  
 qiime tools export \
   --input-path output/core-metrics-results/shannon_vector.qza \
   --output-path output/core-metrics-results/shannon_vector.tsv \
   --output-format AlphaDiversityFormat 
-#导出observed_otus_vector表格    
+# 导出observed_otus_vector表格    
 qiime tools export \
   --input-path output/core-metrics-results/observed_otus_vector.qza \
   --output-path output/core-metrics-results/observed_otus_vector.tsv \
   --output-format AlphaDiversityFormat 
-#导出faith_pd_vector表格    
+# 导出faith_pd_vector表格    
 qiime tools export \
   --input-path output/core-metrics-results/faith_pd_vecto.qza \
   --output-path output/core-metrics-results/faith_pd_vecto.tsv \
   --output-format AlphaDiversityFormat 
-#导出evenness_vector表格    
+# 导出evenness_vector表格    
 qiime tools export \
   --input-path output/core-metrics-results/evenness_vector.qza \
   --output-path output/core-metrics-results/evenness_vector.tsv \
   --output-format AlphaDiversityFormat 
 
-#提取需要的数据
+# 提取需要的数据
 mkdir export
 cp output/otu_table_tax.tsv export/otu_table_tax.tsv
 cp output/otu_table_tax_relative.tsv export/otu_table_tax_relative.tsv
