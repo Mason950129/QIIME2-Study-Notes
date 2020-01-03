@@ -34,7 +34,7 @@ qiime demux summarize \
   --i-data output/trimmed-seqs.qza \
   --o-visualization output/trimmed-seqs.qzv
 
-#质控 去噪
+# 质控 去噪
 qiime dada2 denoise-paired \
   --i-demultiplexed-seqs output/trimmed-seqs.qza \
   --p-trim-left-f 0 \ #正向序列5’端切去长度 根据实际情况设置
@@ -48,7 +48,7 @@ qiime dada2 denoise-paired \
   --verbose
 
 
-##Alpha稀释取线
+## Alpha稀释取线
 qiime diversity alpha-rarefaction \
   --i-table table.qza \
   --i-phylogeny rooted-tree.qza \
