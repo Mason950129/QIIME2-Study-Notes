@@ -69,8 +69,7 @@ qiime feature-table summarize \
 qiime feature-classifier classify-sklearn \
   --i-classifier ../training-feature-classifiers/silva_132_97_16S_V57classifier.qza \ #物种分类器 根据测序区间和数据库等选择 
   --i-reads output/deblur-rep-seqs.qza \
-  --o-classification output/taxonomy-silva.qza \
-  --verbose 
+  --o-classification output/taxonomy-silva.qza
 
 # 生成物种柱形图  
 qiime taxa barplot \
