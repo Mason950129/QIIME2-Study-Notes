@@ -74,10 +74,10 @@ qiime feature-classifier classify-sklearn \
 
 # 生成物种柱形图  
 qiime taxa barplot \
---i-table output/deblur-table.qza \
---i-taxonomy output/taxonomy-silva.qza \
---m-metadata-file metadata.txt \ #分组信息
---o-visualization output/taxa-bar-plots.qzv
+  --i-table output/deblur-table.qza \
+  --i-taxonomy output/taxonomy-silva.qza \
+  --m-metadata-file metadata.txt \
+  --o-visualization output/taxa-bar-plots.qzv
 
 ## 生成带注释的丰度表格
 # 生成相对丰度表格  将绝对丰度的表格转换为相对丰度的表格
@@ -121,10 +121,10 @@ biom add-metadata \
 
 # 转换格式
 biom convert \
--i output/otu_table_tax.biom \
--o output/otu_table_tax.tsv \
---header-key taxonomy \
---to-tsv \
+  -i output/otu_table_tax.biom \
+  -o output/otu_table_tax.tsv \
+  --header-key taxonomy \
+  --to-tsv 
 
 # 转换格式
 biom convert \
