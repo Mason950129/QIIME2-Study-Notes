@@ -1,4 +1,4 @@
-#sample-id 与前的对应  后边每一列可以自定义 /t（Tab）分隔
+#sample-id 与前面的对应  后边每一列可以自定义 /t（Tab）分隔
 sample-id	treatment	species	description
 2-5-1-0	-R	2-5	2-5-R
 2-5-1-1	+R	2-5	2-5+R
