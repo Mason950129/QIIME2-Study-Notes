@@ -164,29 +164,29 @@ qiime phylogeny midpoint-root \
 qiime diversity core-metrics-phylogenetic \
   --i-table output/deblur-table.qza \
   --i-phylogeny output/rooted-tree.qza \
-  --p-sampling-depth 7117 \ #样本重采样深度(一般为最小样本数据量，或覆盖绝大多数样品的数据量)
-  --m-metadata-file metadata.txt \ #分组信息
+  --p-sampling-depth 16582 \ #样本重采样深度(一般为最小样本数据量，或覆盖绝大多数样品的数据量)
+  --m-metadata-file metadata.txt \
   --output-dir output/core-metrics-results
 
 # 统计faith_pd算法Alpha多样性组间差异是否显著，输入多样性值、实验设计，输出统计结果
 qiime diversity alpha-group-significance \
   --i-alpha-diversity output/core-metrics-results/faith_pd_vector.qza \
-  --m-metadata-file metadata.txt \ #分组信息
+  --m-metadata-file metadata.txt \
   --o-visualization output/core-metrics-results/faith-pd-group-significance.qzv
 # 统计evenness组间差异是否显著
 qiime diversity alpha-group-significance \
   --i-alpha-diversity output/core-metrics-results/evenness_vector.qza \
-  --m-metadata-file metadata.txt \ #分组信息
+  --m-metadata-file metadata.txt \
   --o-visualization output/core-metrics-results/evenness-group-significance.qzv
 # 统计observed_otus组间差异是否显著
 qiime diversity alpha-group-significance \
   --i-alpha-diversity output/core-metrics-results/observed_otus_vector.qza \
-  --m-metadata-file metadata.txt \ #分组信息
+  --m-metadata-file metadata.txt \
   --o-visualization output/core-metrics-results/observed_otus-group-significance.qzv
 # 统计shannon组间差异是否显著
 qiime diversity alpha-group-significance \
   --i-alpha-diversity output/core-metrics-results/shannon_vector.qza \
-  --m-metadata-file metadata.txt \ #分组信息
+  --m-metadata-file metadata.txt \
   --o-visualization output/core-metrics-results/shannon-group-significance.qzv
 
 # 导出组间差异结果
@@ -239,8 +239,8 @@ qiime tools export \
   --output-format AlphaDiversityFormat 
 # 导出faith_pd_vector表格    
 qiime tools export \
-  --input-path output/core-metrics-results/faith_pd_vecto.qza \
-  --output-path output/core-metrics-results/faith_pd_vecto.tsv \
+  --input-path output/core-metrics-results/faith_pd_vector.qza \
+  --output-path output/core-metrics-results/faith_pd_vector.tsv \
   --output-format AlphaDiversityFormat 
 # 导出evenness_vector表格    
 qiime tools export \
