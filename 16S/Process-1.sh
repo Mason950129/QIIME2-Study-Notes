@@ -42,7 +42,7 @@ qiime quality-filter q-score-joined \
   --o-filtered-sequences output/demux-joined-filtered.qza \
   --o-filter-stats output/demux-joined-filter-stats.qza 
 
-# 对指控后样品质量进行统计
+# 对质控后样品质量进行统计
 qiime demux summarize \
   --i-data output/demux-joined-filtered.qza \
   --o-visualization output/demux-joined-filtered.qzv
@@ -50,7 +50,7 @@ qiime demux summarize \
 # 去噪
 qiime deblur denoise-16S \
   --i-demultiplexed-seqs output/demux-joined-filtered.qza \
-  --p-left-trim-len 0 \ #切掉5’段碱基的个数 根据质控后的样品质量设定 默认0
+  --p-left-trim-len 0 \ #切掉5’端碱基的个数 根据质控后的样品质量设定 默认0
   --p-trim-length 380 \ #保留的长度 根据质控后的样品质量设定
   --p-jobs-to-start 10 \ #同时进行的工作数量 根据服务器性能设定
   --p-sample-stats \ #收集每个样品的信息
